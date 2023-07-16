@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="This is a vanilla JavaScript game created as part of the Front-End Web Developer program at BCIT.">
+
+    <title>Abby Wants to Play: A JavaScript Game</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chewy&family=Fredoka:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/normalize-fwd.css">
+	<link rel="stylesheet" href="styles/style.css">
+
+</head>
+
+<body>
+
+    <div class="site-wrapper">
+
+        <div class="pre-game-screen" id="pre-game-screen">
+
+                <img src="images/abby-game-banner.png" alt="The banner of this game/page, images of my dog Abby and text saying Abby Wants to Play!  A Javascript Game."> 
+                <!-- Lol, I probably had a bit TOO much fun spamming the pink paint brushes in photoshop for the game banner, but I figured it fits fine for a goofy game anyway, hehe... -->
+
+                <h2>&hearts; Abby is a hyper puppy who always wants to play! &hearts;</h2>
+
+                <div class="pre-game-screen-content" id="pre-game-screen-content">
+
+                    <div class="pre-game-text">
+
+                        <p>Abby really likes having Kassie home more thanks to BCIT online classes, but she doesn't like it when Kassie gets too focused on her coding... Abby has decided that she won't let Kassie code in peace until she gets enough play time.  She has stolen Kassie's slipper and demands some play time.</p>
+
+                        <p>After running off with the slipper, Abby is picking up speed... She's very hard to catch!  In order for her to be fully satisfied with her play time, she must be caught at least 20 times within the time limit of the game.  If you fail to catch her enough times, then you must try to play with her again until you make her happy enough to relax & let Kassie code in peace! Please succeed, Kassie's grades depend on it!</p>
+
+                    </div>
+
+                    <div class="pre-game-pic-and-button">
+
+                            <img src="images/abby-slipper.jpg" alt="Abby with a slipper in front of her">
+
+                            <div class="button-container">
+                                <button class="button load-easy-button" id="load-easy-game-button">
+                                    <span class="pre-game-button-text">Easy</span>
+                                </button>
+                                <button class="button load-normal-button" id="load-normal-game-button">
+                                    <span class="pre-game-button-text">Normal</span>
+                                </button>
+                                <button class="button load-hard-button" id="load-hard-game-button">
+                                    <span class="pre-game-button-text">Hard</span>
+                                </button>
+                            </div>
+                    </div>
+
+                </div>
+        </div>
+
+        <div class="game-screen" id="game-screen">
+
+        <main id="site-main">
+
+        <header class="game-header">
+
+            <img src="images/abby-game-banner.png" alt="The banner of this game/page, images of my dog Abby and text saying Abby Wants to Play!  A Javascript Game.">
+
+            <div class="game-text-top">
+            
+                <div class="caught-container">
+
+                    <h2>Caught Abby:</h2>
+                    <h2 id="times-you-caught-abby">0</h2>
+
+                </div>
+
+                <div class="center-container">
+
+                    <p>Since I don't have a picture of my living room with a better angle, Abby's going to be flying around quite a bit.  Oh well, she'll have fun with it. She's a crazy girl.</p>
+
+                    <button class="button start-game-button" id="start-game-button">
+                        <span class="game-button-text">Let's Play!</span>
+                    </button>
+
+                    <button class="button end-game-button" id="end-game-button">
+                        <span class="game-button-text">I don't want to play anymore!</span>
+                    </button>
+
+                </div>
+
+                <div class="time-left-container">
+
+                    <h2>Time Left:</h2>
+                    <h2 id="time-left-to-play">30</h2>
+
+                </div>
+
+            </div>
+
+        </header>
+
+        <div class="abbys-play-room">
+
+            <div class="play-spot" id="spot1">
+
+            </div>
+
+            <div class="play-spot" id="spot2">
+
+            </div>
+
+            <div class="play-spot" id="spot3">
+
+            </div>
+
+            <div class="play-spot" id="spot4">
+
+            </div>
+
+            <div class="play-spot" id="spot5">
+
+            </div>
+
+            <div class="play-spot" id="spot6">
+
+            </div>
+
+            <div class="play-spot" id="spot7">
+
+            </div>
+
+            <div class="play-spot" id="spot8">
+
+            </div>
+
+            <div class="play-spot" id="spot9">
+
+            </div>
+
+            <div class="play-spot" id="spot10">
+
+            </div>
+
+        </div>
+
+        </main>
+
+        <footer class="site-footer">
+
+            <p>&hearts;  Kassandra Haftner - 2023  &hearts;<br>
+            Site created for educational purposes (BCIT FWD33).</p>
+
+        
+        </footer>
+    
+    </div>
+
+    </div>  
+
+    <div class="post-game-screen-good post-game-screens" id="post-game-screen-good">
+    
+        <h2>"Yay for you, human! Congrats, your play time offering was sufficient!" &hearts;</h2>
+
+        <img src="images/abby-happy.png" alt="Abby resting on the bed">
+
+        <div class="output-container">
+            <p id="good-output-message">You ended the game early! How rude!</p>
+        </div>
+
+        <p>Abby is satisfied with your contribution to her play time. She's ready for a nap now.</p>
+
+        <p><em>Would you like to play again?</em></p>
+
+        <div class="button-center">
+
+            <button class="button reload-game-button" id="reload-game-from-good-result">
+                <span class="reload-game-text">Let's play again, Abby!</span>
+            </button>
+
+        </div>
+
+    </div>
+
+    <div class="post-game-screen-bad post-game-screens" id="post-game-screen-bad">
+
+        <h2>"I appreciate your efforts, human, but that wasn't up to my standards."</h2>
+
+        <img src="images/abby-displeased.png" alt="Abby staring at the camera">
+
+        <div class="output-container">
+            <p id="bad-output-message">You ended the game early! How rude!</p>
+        </div>
+
+        <p>Abby was not pleased with the quality of her play time.  Please try to entertain her again!</p>
+
+        <p><em>Would you like to play again?</em></p>
+
+        <div class="button-center">
+
+            <button class="button reload-game-button" id="reload-game-from-bad-result">
+                <span class="reload-game-text">Let's play again, Abby!</span>
+            </button>
+
+        </div>
+
+    </div>
+
+    <script src="scripts/script.js"></script>
+
+</body>
+</html>
